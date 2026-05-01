@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:sqlserver://localhost:1433;databaseName=role_management_db;encrypt=true;trustServerCertificate=true;
     username: sa
-    password: YourStrongPassword123! # Update this to your actual password
+    password: [PASSWORD]
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     hibernate:
