@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=role_management_db;encrypt=true;trustServerCertificate=true;
+    username: sa
+    password: YourStrongPassword123! # Update this to your actual password
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.SQLServerDialect
+
+jwt:
+  secret: 4189ea07874e06f089b2dd19f74c5e39190a1f402aeaf7bf6fb406f0f5b25722 # In production, inject this via environment variable
+  expiration: 86400000 # 24 hours in ms

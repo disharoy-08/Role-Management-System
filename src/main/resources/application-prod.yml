@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: validate # Ensure database schema matches entities, but don't auto-modify in prod
+    show-sql: false # Disable SQL logging in production for performance
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.SQLServerDialect
+
+jwt:
+  secret: ${JWT_SECRET} # Must be injected via environment variable
+  expiration: 86400000 # 24 hours in ms
